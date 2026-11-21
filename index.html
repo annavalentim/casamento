@@ -126,6 +126,12 @@ nav .links a:hover,nav .links a:focus-visible{background:color-mix(in srgb,var(-
 .card p{margin:12px 0 0;text-align:left;width:100%}
 .card .who b{display:block;font:600 13px "Cormorant Garamond",serif;letter-spacing:.2em;text-transform:uppercase;color:var(--sage)}
 .looksbtn{display:flex;justify-content:center;margin-top:30px}
+.clima{display:flex;gap:20px;align-items:flex-start;max-width:820px;margin:28px auto 0;padding:26px 28px;background:var(--card);border:1px solid var(--line);border-radius:4px}
+.clima .ico{flex:none;width:52px;height:52px}
+.clima h3{margin:0 0 6px;font:500 26px/1.2 "Cormorant Garamond",serif}
+.clima p{margin:0;color:var(--soft)}
+.card .avoid{margin-top:12px;padding:10px 12px;border-left:2px solid var(--sage);background:color-mix(in srgb,var(--sage) 8%,transparent);font-size:15px}
+@media(max-width:600px){.clima{flex-direction:column;gap:8px;padding:22px 20px}}
 #looksDlg{max-width:min(1040px,calc(100% - 24px));width:100%;padding:28px 20px 24px}
 #looksDlg h3{margin:0;font:500 30px/1.15 "Cormorant Garamond",serif;text-align:center}
 #looksDlg .lead{margin:4px 0 18px}
@@ -312,6 +318,7 @@ footer p{margin:4px 0 0}
     <symbol id="i-blend" viewBox="0 0 64 64"><path d="M22 10h20l-3 26H25zM24 36h16l2 8H22zM20 44h24v8H20z"/></symbol>
     <symbol id="i-plane" viewBox="0 0 64 64"><path d="M8 36l48-18c3-1 5 2 2 4L40 34l-6 18-5-2 2-14-12 4-4 8-4-1 2-10z"/></symbol>
     <symbol id="i-boat" viewBox="0 0 64 64"><path d="M10 40h44l-6 10H16zM32 10v30M32 12l14 24H32M32 16l-12 20h12M6 56c4 0 6-2 9-2s5 2 9 2 6-2 9-2 5 2 9 2 6-2 9-2"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 64 64"><circle cx="32" cy="32" r="10"/><path d="M32 8v8M32 48v8M8 32h8M48 32h8M15 15l6 6M43 43l6 6M15 49l6-6M43 21l6-6"/></symbol>
     <symbol id="i-pix" viewBox="0 0 64 64"><path d="M32 6l26 26-26 26L6 32z"/><path d="M20 32l12-12 12 12-12 12z"/></symbol>
   </defs>
 </svg>
@@ -445,8 +452,9 @@ footer p{margin:4px 0 0}
         <span class="when caps">1º de maio</span>
         <h3>Cerimônia e festa</h3>
         <p class="tag">Passeio completo</p>
-        <p class="who"><b>Mulheres</b>Vestido longo ou midi elegante.</p>
+        <p class="who"><b>Mulheres</b>Vestido longo.</p>
         <p class="who"><b>Homens</b>Terno escuro e gravata.</p>
+        <p class="avoid">Por gentileza, evite branco, marfim e tons de champanhe claro.</p>
         <p class="tip">A cerimônia é nos jardins, com caminhos de cascalho: saltos mais grossos são bem-vindos.</p>
       </article>
       <article class="card">
@@ -457,6 +465,13 @@ footer p{margin:4px 0 0}
         <p class="who"><b>Mulheres</b>Vestido leve, ou saia e calça de linho, com sandália baixa.</p>
         <p class="who"><b>Homens</b>Polo ou camisa de linho, com calça chino.</p>
       </article>
+    </div>
+    <div class="clima">
+      <svg class="ico" aria-hidden="true"><use href="#i-sun"/></svg>
+      <div>
+        <h3>O clima em maio na Toscana</h3>
+        <p>É primavera! Pense em dias agradáveis, entre 20 e 23 °C, e noites mais fresquinhas, por volta de 11 a 13 °C. Costuma fazer sol, com uma ou outra pancada rápida de chuva. O sol se põe por volta das 20h, e a noite esfria nas colinas de Settignano: vale levar um blazer, uma pashmina ou um casaquinho leve para depois do jantar.</p>
+      </div>
     </div>
     <div class="looksbtn"><button class="go ghost" type="button" id="looksOpen">Veja exemplos de looks</button></div>
   </div>
@@ -654,7 +669,7 @@ footer p{margin:4px 0 0}
       <details><summary>Qual aeroporto é melhor?</summary>
         <p>O de <b>Florença</b> (FLR) é o mais próximo, a cerca de 30 minutos da Villa. Pisa, Bolonha e Roma (Fiumicino) também são opções, com trem rápido até Florença. Roma costuma ter mais voos diretos saindo do Brasil. Veja mais em <a href="#como-chegar">Como chegar</a>.</p></details>
       <details><summary>O que vestir em cada evento?</summary>
-        <p>Welcome dinner: cocktail chic, todo em tons de branco. Cerimônia e festa: passeio completo. Brunch: casual. Os detalhes estão em <a href="#dress-code">Dress code</a>.</p></details>
+        <p>Welcome dinner: cocktail chic, todo em tons de branco. Cerimônia e festa: passeio completo, com vestido longo para elas (por gentileza, evite branco, marfim e champanhe claro). Brunch: casual. Os detalhes estão em <a href="#dress-code">Dress code</a>.</p></details>
       <details><summary>Onde devo me hospedar?</summary>
         <p>Estamos preparando sugestões de hotéis em Florença e Settignano, que vão aparecer em <a href="#hospedagem">Hospedagem</a>. Como maio é alta temporada, vale reservar com antecedência.</p></details>
       <details><summary>Como funciona a lista de presentes?</summary>
