@@ -1059,15 +1059,15 @@ const t = str => (LANG !== 'pt' && I18N[LANG] && I18N[LANG][str] !== undefined) 
   if (TB_LINK) { $('tbLink').href = TB_LINK; $('tbSoon').hidden = true; } else $('tbLink').hidden = true;
 
   const COTAS = [
-    { nome: 'Jantar romântico', desc: 'Um jantar especial na lua de mel', valor: 350, eur: 60, icon: 'plate' },
-    { nome: 'Um passeio pelas águas da Itália', desc: 'Um passeio de barco para descobrir novas paisagens juntos', valor: 500, eur: 85, icon: 'boat' },
-    { nome: 'Vinho toscano', desc: 'Para brindarmos lembrando de vocês', valor: 200, eur: 35, icon: 'glass' },
-    { nome: 'Buongiorno a dois', desc: 'Um café da manhã tranquilo para começar o dia juntinhos', valor: 150, eur: 25, icon: 'cup' },
-    { nome: 'Noite em hotel especial', desc: 'Um upgrade na lua de mel', valor: 800, eur: 135, icon: 'bed' },
-    { nome: 'O começo da próxima viagem', desc: 'Uma contribuição para os voos da nossa lua de mel', valor: 1000, eur: 170, icon: 'plane' },
-    { nome: 'Spa a dois', desc: 'Para descansar depois da festa', valor: 600, eur: 100, icon: 'towel' },
-    { nome: 'Carinho para o nosso lar', desc: 'Um presente para deixar a nossa casa ainda mais nossa', valor: 400, eur: 70, icon: 'pot' },
-    { nome: 'Panela Le Creuset para a noiva', desc: 'A panela dos sonhos da noiva, para a nossa cozinha', valor: 3000, eur: 515, icon: 'pot' },
+    { nome: 'Buongiorno a dois', desc: 'Um café da manhã tranquilo para começar o dia juntinhos', valor: 300, eur: 50, icon: 'cup' },
+    { nome: 'Vinho toscano', desc: 'Para brindarmos lembrando de vocês', valor: 500, eur: 85, icon: 'glass' },
+    { nome: 'Jantar romântico', desc: 'Um jantar especial na lua de mel', valor: 800, eur: 135, icon: 'plate' },
+    { nome: 'Um passeio pelas águas da Itália', desc: 'Um passeio de barco para descobrir novas paisagens juntos', valor: 1200, eur: 205, icon: 'boat' },
+    { nome: 'Spa a dois', desc: 'Para descansar depois da festa', valor: 1500, eur: 255, icon: 'towel' },
+    { nome: 'Noite em hotel especial', desc: 'Um upgrade na lua de mel', valor: 2000, eur: 340, icon: 'bed' },
+    { nome: 'Carinho para o nosso lar', desc: 'Um presente para deixar a nossa casa ainda mais nossa', valor: 2500, eur: 430, icon: 'pot' },
+    { nome: 'O começo da próxima viagem', desc: 'Uma contribuição para os voos da nossa lua de mel', valor: 3000, eur: 515, icon: 'plane' },
+    { nome: 'Panela Le Creuset para a noiva', desc: 'A panela dos sonhos da noiva, para a nossa cozinha', valor: 3000, eur: 515, icon: 'pot' }
   ];
   // IBAN — preencha para transferências em euros
   const IBAN = '', IBAN_TITULAR = '', IBAN_BIC = '';
@@ -1100,7 +1100,7 @@ const t = str => (LANG !== 'pt' && I18N[LANG] && I18N[LANG][str] !== undefined) 
   const grid = $('gifts');
   grid.innerHTML = COTAS.map((x, i) => `<article class="gift">
     <svg class="ico" aria-hidden="true"><use href="#i-${x.icon}"/></svg>
-    <h3>${x.nome}</h3><p>${x.desc}</p><p class="val">${brl(x.valor)}<span class="eur"> · € ${x.eur}</span></p>
+    <h3>${x.nome}</h3><p>${x.desc}</p><p class="val">€ ${x.eur}<span class="eur"> · ${brl(x.valor)}</span></p>
     <button class="go" type="button" data-i="${i}">Presentear</button>
   </article>`).join('');
   const dlg = $('giftDlg');
