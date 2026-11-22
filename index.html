@@ -1089,8 +1089,8 @@ const t = str => (LANG !== 'pt' && I18N[LANG] && I18N[LANG][str] !== undefined) 
     for (const b of document.querySelectorAll('.paytabs button')) b.setAttribute('aria-pressed', b.dataset.m === m);
     $('payPix').hidden = m !== 'pix'; $('payIban').hidden = m !== 'iban';
     if (curCota) {
-      $('giftVal').textContent = m === 'iban' ? '€ ' + curCota.eur : brl(curCota.valor);
-      $('giftNotify').href = wa(`Olá, Carol e Léo! 🤍\nPresenteei vocês com a cota: ${curCota.nome} (${m === 'iban' ? '€ ' + curCota.eur + ', transferência em euros' : brl(curCota.valor) + ', PIX'})\nNome: `);
+      $('giftVal').textContent = m === 'iban' ? '€ ' + curCota.eur.toLocaleString('pt-BR') : brl(curCota.valor);
+      $('giftNotify').href = wa(`Olá, Carol e Léo! 🤍\nPresenteei vocês com a cota: ${curCota.nome} (${m === 'iban' ? '€ ' + curCota.eur.toLocaleString('pt-BR') + ', transferência em euros' : brl(curCota.valor) + ', PIX'})\nNome: `);
     }
     $('ibanOn').hidden = !IBAN; $('ibanOff').hidden = !!IBAN;
     $('ibTit').textContent = IBAN_TITULAR; $('ibIban').textContent = ibanFmt;
@@ -1102,7 +1102,7 @@ const t = str => (LANG !== 'pt' && I18N[LANG] && I18N[LANG][str] !== undefined) 
   const grid = $('gifts');
   grid.innerHTML = COTAS.map((x, i) => `<article class="gift">
     <svg class="ico" aria-hidden="true"><use href="#i-${x.icon}"/></svg>
-    <h3>${x.nome}</h3><p>${x.desc}</p><p class="val">€ ${x.eur}<span class="eur"> · ${brl(x.valor)}</span></p>
+    <h3>${x.nome}</h3><p>${x.desc}</p><p class="val">€ ${x.eur.toLocaleString('pt-BR')}<span class="eur"> · ${brl(x.valor)}</span></p>
     <button class="go" type="button" data-i="${i}">Presentear</button>
   </article>`).join('');
   const dlg = $('giftDlg');
