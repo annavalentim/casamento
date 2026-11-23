@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="only light">
+<meta name="theme-color" content="#fbf4ee">
 <title>Anna Carolina & Leonardo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,12 +16,12 @@
    PICTURE: o jardim em aquarela do Save the Date, molduras rendadas recortadas, ícones desenhados à mão.
    COLOUR and TYPE: papel quente com textura, tinta oliva, faixa verde profunda, céu azul suave; Pinyon Script, Cormorant em caixa-alta espaçada, EB Garamond.
    LAYOUT: coluna central simétrica, faixas de largura total alternando papel e verde, títulos caixa-alta + script. */
-:root{color-scheme:light dark;
+:root{color-scheme:light only;
   --bg:light-dark(#fbf4ee,#1a1d17);--paper:#fbf4ee;--ink:light-dark(#33382a,#eee7dc);
   --soft:light-dark(#5e644f,#b9b8a6);--sage:light-dark(#6e7b4c,#a9b884);--deep:#55613a;
   --line:light-dark(#ddd3c4,#3a3f33);--card:light-dark(#fffaf5,#22261e);
   --grain:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35 0 0 0 0 .3 0 0 0 0 .22 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
-:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+:root[data-theme]{color-scheme:light only}
 *{box-sizing:border-box;min-width:0}
 [hidden]{display:none !important}
 html{scroll-behavior:smooth;scroll-padding-top:72px}
