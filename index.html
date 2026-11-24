@@ -274,8 +274,6 @@ input:focus-visible,textarea:focus-visible{outline:2px solid var(--sage);outline
 .go:hover,.go:focus-visible{filter:brightness(1.08);outline:2px solid var(--sage);outline-offset:3px}
 .ghost{background:transparent;color:var(--sage);border:1px solid var(--sage)}
 .done{text-align:center}
-.dogs{display:block;width:min(100%,380px);height:auto;margin:0 auto 6px;mix-blend-mode:multiply}
-.dogcap{margin:-4px 0 14px;font-size:26px;color:var(--sage)}
 .okico{width:64px;height:64px;margin:0 auto 4px;display:block}
 .okt{margin:0 0 6px;font:500 32px/1.15 "Cormorant Garamond",serif}
 .done pre{white-space:pre-wrap;text-align:left;font:16px/1.5 "EB Garamond",serif;background:var(--bg);border:1px solid var(--line);border-radius:4px;padding:16px 18px;margin:18px 0}
@@ -772,8 +770,7 @@ footer p{margin:4px 0 0}
     </form>
 
     <div class="done" id="rsvpDone" hidden>
-      <img class="dogs" src="cachorros.jpg" alt="Aquarela de Lerkus e Elsa, os cachorros da Carol e do Léo, brindando" width="900" height="600" loading="lazy">
-      <p class="dogcap script">Lerkus e Elsa já estão brindando com você!</p>
+      <svg class="ico okico" aria-hidden="true" viewBox="0 0 64 64"><circle cx="32" cy="32" r="26"/><path d="M20 33l8 8 16-18"/></svg>
       <h3 class="okt">Confirmação recebida!</h3>
       <p id="rsvpThanks">Obrigado por responder. Mal podemos esperar para celebrar com você! 🤍</p>
       <pre id="rsvpText"></pre>
