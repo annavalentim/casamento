@@ -273,6 +273,7 @@ input:focus-visible,textarea:focus-visible{outline:2px solid var(--sage);outline
 .go{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:50px;padding:0 28px;border:0;border-radius:999px;background:var(--sage);color:#fbf4ee;font:600 15px "Cormorant Garamond",serif;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;cursor:pointer}
 .go:hover,.go:focus-visible{filter:brightness(1.08);outline:2px solid var(--sage);outline-offset:3px}
 .ghost{background:transparent;color:var(--sage);border:1px solid var(--sage)}
+.dogs{display:block;width:min(100%,340px);height:auto;margin:0 auto 4px;mix-blend-mode:multiply;}
 .done{text-align:center}
 .okico{width:64px;height:64px;margin:0 auto 4px;display:block}
 .okt{margin:0 0 6px;font:500 32px/1.15 "Cormorant Garamond",serif}
@@ -355,6 +356,9 @@ dialog .lead{margin:0 0 14px;text-align:center;color:var(--soft)}
 .nw{white-space:nowrap}
 
 footer{background:var(--grain),var(--deep);color:#f6efe2;text-align:center;padding:56px 16px 64px}
+.sign{display:flex;align-items:flex-end;justify-content:center;gap:clamp(16px,5vw,56px);max-width:900px;margin:0 auto}
+.pup{width:clamp(96px,16vw,170px);height:auto;flex:none;filter:drop-shadow(0 8px 12px rgba(20,24,12,.25))}
+@media(max-width:560px){.sign{flex-wrap:wrap}.sign>div{order:-1;width:100%}.pup{width:110px}}
 footer .mono{width:84px;color:#f1e8d6}
 footer .script{font-size:40px;margin:10px 0 0}
 footer p{margin:4px 0 0}
@@ -727,6 +731,7 @@ footer p{margin:4px 0 0}
 
 <section class="band" id="rsvp">
   <div class="wrap">
+    <img class="dogs" src="cachorros.jpg" alt="Aquarela de Lerkus e Elsa, os cachorros da Carol e do Léo, brindando" width="900" height="600" loading="lazy">
     <div class="head"><p class="eb caps">Confirme sua</p><h2 class="script">Presença</h2>
       <p class="sub">Queremos muito celebrar com você. Conte pra gente quem vem e em quais momentos vai estar.</p></div>
     <span class="deadline">Confirme até 15 de janeiro de 2027</span>
@@ -905,8 +910,14 @@ footer p{margin:4px 0 0}
 </dialog>
 
 <footer>
-  <svg class="mono" viewBox="0 0 200 200" role="img" aria-label="Monograma C e L"><use href="#monogram"/></svg>
-  <p class="script">Com carinho, Carol &amp; Léo</p>
+  <div class="sign">
+    <img class="pup" src="taca-branco.png" alt="Aquarela da cachorrinha branca dentro de uma taça de martini" width="440" height="519" loading="lazy">
+    <div>
+      <svg class="mono" viewBox="0 0 200 200" role="img" aria-label="Monograma C e L"><use href="#monogram"/></svg>
+      <p class="script">Com carinho, Carol &amp; Léo</p>
+    </div>
+    <img class="pup" src="taca-caramelo.png" alt="Aquarela do cachorrinho caramelo dentro de uma taça de martini" width="440" height="519" loading="lazy">
+  </div>
   <p style="margin-top:14px">Dúvidas? WhatsApp da Carol: <a href="https://wa.me/5521997990777" target="_blank" rel="noopener" class="nw">+55 21 99799-0777</a></p>
   <p class="caps" style="font-size:13px;margin-top:10px">Florença · 2027</p>
 </footer>
