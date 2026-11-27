@@ -899,7 +899,7 @@ footer p{margin:4px 0 0}
     </div>
     <div id="payIban" hidden>
       <div id="ibanOn">
-        <dl class="bank"><dt>Titular</dt><dd id="ibTit"></dd><dt>IBAN</dt><dd id="ibIban"></dd><dt id="ibBicT">BIC/SWIFT</dt><dd id="ibBic"></dd></dl>
+        <dl class="bank"><dt id="ibTitT">Titular</dt><dd id="ibTit"></dd><dt>IBAN</dt><dd id="ibIban"></dd><dt id="ibBicT">BIC/SWIFT</dt><dd id="ibBic"></dd></dl>
         <div class="row"><button class="go" type="button" id="ibCopy">Copiar IBAN</button></div>
         <p class="lead ref">Na referência da transferência, coloque seu nome e o presente escolhido.</p>
       </div>
@@ -1089,7 +1089,7 @@ const t = str => (LANG !== 'pt' && I18N[LANG] && I18N[LANG][str] !== undefined) 
   $('rsvpEdit').addEventListener('click', () => { form.reset(); famBox.innerHTML = ''; for (const id of ['evts', 'famBox', 'hotelBox', 'restrBox']) $(id).style.display = ''; done.hidden = true; form.hidden = false; $('nome').focus(); });
 
   // PIX — preencha a chave e o nome do titular
-  const PIX_CHAVE = '', PIX_NOME = '';
+  const PIX_CHAVE = '12743001771', PIX_NOME = '';
   $('pixKey').textContent = PIX_CHAVE || t('Chave PIX em breve');
   $('pixName').textContent = PIX_NOME ? t('Em nome de ') + PIX_NOME : '';
   if (!PIX_CHAVE) $('pixCopy').hidden = true;
@@ -1129,7 +1129,7 @@ const t = str => (LANG !== 'pt' && I18N[LANG] && I18N[LANG][str] !== undefined) 
     { nome: 'Uma lua de mel inesquecível', desc: 'Para celebrarmos o começo da nossa vida a dois com uma viagem especial.', valor: 6000, eur: 1000, icon: 'plane' }
   ];
   // IBAN — preencha para transferências em euros
-  const IBAN = '', IBAN_TITULAR = '', IBAN_BIC = '';
+  const IBAN = 'PT50001800035547752502059', IBAN_TITULAR = '', IBAN_BIC = 'TOTAPTPL';
   const ibanFmt = IBAN.replace(/\s+/g, '').replace(/(.{4})/g, '$1 ').trim();
   $('ibKey2').textContent = ibanFmt || t('IBAN em breve');
   $('ibName2').textContent = IBAN_TITULAR ? t('Em nome de ') + IBAN_TITULAR + (IBAN_BIC ? ' · BIC ' + IBAN_BIC : '') : '';
@@ -1150,7 +1150,7 @@ const t = str => (LANG !== 'pt' && I18N[LANG] && I18N[LANG][str] !== undefined) 
       $('giftNotify').href = wa(`Olá, Carol e Léo! 🤍\nPresenteei vocês com a cota: ${curCota.nome} (${m === 'iban' ? '€ ' + curCota.eur.toLocaleString('pt-BR') + ', transferência em euros' : brl(curCota.valor) + ', PIX'})\nNome: `);
     }
     $('ibanOn').hidden = !IBAN; $('ibanOff').hidden = !!IBAN;
-    $('ibTit').textContent = IBAN_TITULAR; $('ibIban').textContent = ibanFmt;
+    $('ibTit').textContent = IBAN_TITULAR; $('ibTitT').hidden = $('ibTit').hidden = !IBAN_TITULAR; $('ibIban').textContent = ibanFmt;
     $('ibBic').textContent = IBAN_BIC; $('ibBicT').hidden = $('ibBic').hidden = !IBAN_BIC;
   };
   document.querySelector('.paytabs').addEventListener('click', e => { const b = e.target.closest('button[data-m]'); if (b) payMode(b.dataset.m); });
